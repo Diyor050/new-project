@@ -1,0 +1,116 @@
+$primary-orange: #FF8A00;
+$primary-green: #3FA733;
+$text-dark: #333;
+$white: #fff;
+
+.navbar {
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif; // Shriftni o'zingizga moslang
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+
+    &-icon {
+      background-color: $primary-orange;
+      color: $white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    &-text {
+      font-weight: 800;
+      font-size: 22px;
+      color: $text-dark;
+
+      span {
+        color: $primary-orange;
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover,
+      &.active {
+        color: $primary-orange;
+      }
+    }
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .cart-icon {
+      position: relative;
+      background: #F5F5F5;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        display: block;
+      }
+
+      .badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: #FF3D3D;
+        color: $white;
+        font-size: 10px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .btn-login {
+      background-color: $primary-green;
+      color: $white;
+      border: none;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
