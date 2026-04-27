@@ -126,117 +126,94 @@ body {
 }
 
 .menu-section {
-  padding: 80px 0;
-  text-align: center;
-  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center; /* Hamma narsani markazga tekislaydi */
 }
 
+/* Sarlavha alohida qatorda bo'lishi uchun */
 .menu-title {
+  display: block;
+  width: 100%;
   font-size: 48px;
   color: #311F09;
   margin-bottom: 40px;
-  font-family: 'Playfair Display', serif; /* Rasmga o'xshash shrift */
 }
 
-/* Filtrlar */
+/* Filtrlar alohida qatorda bo'lishi uchun */
 .filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap; /* Mobil versiya uchun */
 }
 
 .filter-btn {
   padding: 15px 35px;
   border: none;
-  border-radius: 40px;
-  background-color: #F8F8F8;
-  color: #311F09;
-  font-weight: 600;
+  border-radius: 25px;
+  background: #F8F8F8;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 500;
 }
 
-.filter-btn.active, .filter-btn:hover {
-  background-color: #311F09;
-  color: #fff;
+.filter-btn.active {
+  background: #311F09;
+  color: white;
 }
 
-/* Kartochkalar konteyneri */
+/* Kartochkalarni yonma-yon terish (X o'qi) */
 .menu-grid {
   display: flex;
+  flex-direction: row; /* Yonma-yon */
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Agar ekran kichik bo'lsa pastga tushadi */
 }
 
 .menu-card {
-  background: #F9F9F9;
-  padding: 40px 30px;
-  border-radius: 50px;
+  background: #fff;
+  border-radius: 40px;
+  padding: 30px;
   width: 320px;
-  text-align: center;
-  transition: transform 0.3s;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05); /* Yumshoq soya */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.menu-card:hover {
-  transform: translateY(-10px);
-}
-
-.card-img img {
+.food-img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 20px;
 }
 
-.food-name {
-  font-size: 24px;
-  color: #311F09;
-  margin-bottom: 10px;
-}
-
-.rating {
-  color: #FF8A00;
-  font-size: 18px;
+.stars {
+  color: #000;
   margin-bottom: 15px;
-}
-
-.rating .gray {
-  color: #E0E0E0;
-}
-
-.description {
-  font-size: 14px;
-  color: #5C5C5C;
-  line-height: 1.6;
-  margin-bottom: 25px;
 }
 
 .card-footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .price {
-  font-weight: 700;
   font-size: 20px;
-  color: #311F09;
+  font-weight: 700;
 }
 
-.order-btn {
-  background-color: #FF8A00;
-  color: #fff;
+.order-now {
+  background: #FF8A00;
+  color: white;
   border: none;
   padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 600;
+  border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.order-btn:hover {
-  background-color: #e67e00;
 }
